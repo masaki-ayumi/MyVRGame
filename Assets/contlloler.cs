@@ -1,7 +1,8 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
+
+//ジャイロセンサーのスクリプト
 public class contlloler : MonoBehaviour
 {
 
