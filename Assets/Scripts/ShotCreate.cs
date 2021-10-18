@@ -7,6 +7,8 @@ public class ShotCreate : MonoBehaviour
     public GameObject shotCreate;
     public GameObject shotPrefab;
 
+    public int timeCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,14 @@ public class ShotCreate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        timeCount++;
         if (Input.GetMouseButton(0))
         {
-            GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
-            Destroy(shot, 1.0f);
+            if (timeCount % 5 == 0)
+            {
+                GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
+                Destroy(shot, 2.0f);
+            }
         }
     }
 }

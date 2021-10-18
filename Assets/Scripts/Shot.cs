@@ -11,7 +11,7 @@ public class Shot : MonoBehaviour
     void Start()
     {
         rigidbody = this.GetComponent<Rigidbody>();
-        vector = new Vector3(0.0f, 0.0f, 20.0f);
+        vector = new Vector3(0.0f, 0.0f, 50.0f);
     }
 
     // Update is called once per frame
