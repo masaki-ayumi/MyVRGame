@@ -21,7 +21,7 @@ public class ShotCreate : MonoBehaviour
         timeCount++;
         if (Input.GetMouseButton(0))
         {
-            if (timeCount % 5 == 0)
+            if (timeCount % 6 == 0)
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
                 Destroy(shot, 2.0f);

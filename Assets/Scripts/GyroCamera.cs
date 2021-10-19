@@ -1,8 +1,9 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class contlloler : MonoBehaviour
+
+// スマホのジャイロセンサーでカメラを動かすスクリプト
+public class GyroCamera : MonoBehaviour
 {
 
     Quaternion currentGyro;
