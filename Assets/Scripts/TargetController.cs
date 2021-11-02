@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 的の動きや状態を制御するスクリプト
+/// </summary>
 public class TargetController : MonoBehaviour
 {
     Transform trans;
     Rigidbody rigid;
     Vector3 targetVector;
+    int count = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,21 +26,31 @@ public class TargetController : MonoBehaviour
        
     }
 
+
+
     /// <summary>
     /// 弾に当たったら的が移動する
     /// </summary>
     public void OnTriggerEnter(Collider other)
     {
-        trans.transform.position = new Vector3(0, 0, 0);
-        targetVector = new Vector3(0, 0, 0);
 
-        //座標を乱数で決定
-        targetVector.x = Random.Range(-10, 10);
-        targetVector.y = Random.Range(-10, 10);
-        targetVector.z = Random.Range(-10, 10);
+        count++;
+        Debug.Log(count);
+        if (count >= 10)
+        {
+            count = 0;
 
-        //新しい座標を代入
-        trans.transform.Translate(targetVector);
+            trans.transform.position = new Vector3(0, 0, 0);
+            targetVector = new Vector3(0, 0, 0);
+
+            //座標を乱数で決定
+            targetVector.x = Random.Range(-10, 10);
+            targetVector.y = Random.Range(-10, 10);
+            targetVector.z = Random.Range(-10, 10);
+
+            //新しい座標を代入
+            trans.transform.Translate(targetVector);
+        }
     }
 
 }
