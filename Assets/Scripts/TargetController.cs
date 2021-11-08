@@ -52,6 +52,7 @@ public class TargetController : MonoBehaviour
             //新しい座標を代入
             trans.transform.Translate(targetVector);
 
+            //スコア加算
             score += 1;
         }
     }
