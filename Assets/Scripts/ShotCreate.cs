@@ -24,7 +24,7 @@ public class ShotCreate : MonoBehaviour
             if (timeCount % 6 == 0)
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
-                Destroy(shot, 2.0f);
+                Destroy(shot, 1.0f);
             }
         }
     }
