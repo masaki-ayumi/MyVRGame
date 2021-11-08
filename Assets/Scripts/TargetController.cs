@@ -11,6 +11,7 @@ public class TargetController : MonoBehaviour
     Rigidbody rigid;
     Vector3 targetVector;
     int count = 0;
+    public int score = 0;
 
 
     // Start is called before the first frame update
@@ -50,6 +51,8 @@ public class TargetController : MonoBehaviour
 
             //新しい座標を代入
             trans.transform.Translate(targetVector);
+
+            score += 1;
         }
     }
 
