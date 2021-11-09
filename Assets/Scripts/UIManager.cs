@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     Text scoreText;
-    public GameObject textObject;
+
 
     public GameObject target;
     TargetController targetScripts;
@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = textObject.GetComponent<Text>();
+        scoreText = this.GetComponent<Text>();
 
         targetScripts = target.GetComponent<TargetController>();
 
