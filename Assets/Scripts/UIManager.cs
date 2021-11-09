@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     Text scoreText;
-
+    public GameObject textObject;
 
     public GameObject target;
     TargetController targetScripts;
@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = this.GetComponent<Text>();
+        scoreText = textObject.GetComponent<Text>();
 
         targetScripts = target.GetComponent<TargetController>();
 
@@ -23,7 +23,10 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //的からスコアを受け取る
         score = targetScripts.score;
+
+        //スコア画面表示
         scoreText.text = score.ToString();
     }
 }
