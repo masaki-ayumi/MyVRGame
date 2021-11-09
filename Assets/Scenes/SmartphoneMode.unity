@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcbeb064f429c6448eb5767eac56594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObject: {fileID: 0}
+  textObject: {fileID: 1736279812}
   target: {fileID: 607115492}
 --- !u!4 &1021464478
 Transform:

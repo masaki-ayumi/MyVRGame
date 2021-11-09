@@ -23,10 +23,20 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ScoreUI();
+    }
+
+    public void ScoreUI()
+    {
         //的からスコアを受け取る
         score = targetScripts.score;
 
         //スコア画面表示
         scoreText.text = score.ToString();
+    }
+
+    public void TimeUI()
+    {
+
     }
 }
