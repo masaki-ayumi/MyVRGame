@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -525,8 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcbeb064f429c6448eb5767eac56594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObject: {fileID: 1736279812}
+  scoreTextobject: {fileID: 1736279812}
   target: {fileID: 607115492}
+  timeTextobject: {fileID: 1291799803}
 --- !u!4 &1021464478
 Transform:
   m_ObjectHideFlags: 0
@@ -888,7 +889,6 @@ GameObject:
   - component: {fileID: 1736279813}
   - component: {fileID: 1736279816}
   - component: {fileID: 1736279815}
-  - component: {fileID: 1736279814}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -915,20 +915,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1904, y: -128}
   m_SizeDelta: {x: 512, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1736279814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736279812}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fcbeb064f429c6448eb5767eac56594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textObject: {fileID: 1736279812}
-  target: {fileID: 607115492}
 --- !u!114 &1736279815
 MonoBehaviour:
   m_ObjectHideFlags: 0

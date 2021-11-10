@@ -6,15 +6,22 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     Text scoreText;
-    public GameObject textObject;
+    public GameObject scoreTextobject;
 
     public GameObject target;
     TargetController targetScripts;
     private int score;
+    private float countdown = 30f;
+
+    Text timeText;
+    public GameObject timeTextobject;
+
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = textObject.GetComponent<Text>();
+        scoreText = scoreTextobject.GetComponent<Text>();
+
+        timeText = timeTextobject.GetComponent<Text>();
 
         targetScripts = target.GetComponent<TargetController>();
 
@@ -23,6 +30,13 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        countdown -= Time.deltaTime;
+        timeText.text = countdown.ToString("f0");
+        if (countdown<=0)
+        {
+            timeText.text = "0";
+        }
+
         ScoreUI();
     }
 
@@ -35,8 +49,5 @@ public class UIManager : MonoBehaviour
         scoreText.text = "スコア:"+score.ToString();
     }
 
-    public void TimeUI()
-    {
-
-    }
+    
 }
