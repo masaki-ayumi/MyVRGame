@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
         score = targetScripts.score;
 
         //スコア画面表示
-        scoreText.text = score.ToString();
+        scoreText.text = "スコア:"+score.ToString();
     }
 
     public void TimeUI()
