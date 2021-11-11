@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
         timeText.text = countdown.ToString("f0");
         if (countdown<=0)
         {
-            timeText.text = "0";
+            timeText.text = "おわり";
         }
 
         ScoreUI();
