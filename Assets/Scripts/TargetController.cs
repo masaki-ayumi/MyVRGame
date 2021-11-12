@@ -36,7 +36,6 @@ public class TargetController : MonoBehaviour
     {
 
         count++;
-        Debug.Log(count);
         if (count >= 10)
         {
             count = 0;
