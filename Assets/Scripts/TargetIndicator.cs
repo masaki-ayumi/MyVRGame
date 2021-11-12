@@ -23,6 +23,30 @@ public class TargetIndicator : MonoBehaviour
 
         var position = mainCamera.WorldToScreenPoint(target.position) - centor;
 
+        // カメラ後方にあるターゲットのスクリーン座標は、画面中心に対する点対称の座標にする
+        if (position.z < 0f)
+        {
+            position.x = -position.x;
+            position.y = -position.y;
+        }
+
+        float d = Mathf.Max(
+            Mathf.Abs(position.x / position.x),
+            Mathf.Abs(position.y / position.y)
+        );
+
+        // ターゲットのスクリーン座標が画面外なら、画面端になるよう調整する
+        bool isOffscreen = (position.z < 0f || d > 1f);
+        if (isOffscreen)
+        {
+            position.x /= d;
+            position.y /= d;
+        }
+
+        Debug.Log(position);
+        //Debug.Log(mainCamera.WorldToScreenPoint(target.position));
+        Debug.Log(centor);
+
         rectTransform.anchoredPosition = position;
     }
 }
