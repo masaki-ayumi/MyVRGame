@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject target;
     TargetController targetScripts;
     private int score;
-    private float countdown = 30f;
+    private float countdown = 60f;
 
     Text timeText;
     public GameObject timeTextobject;
