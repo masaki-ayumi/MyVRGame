@@ -36,7 +36,6 @@ public class TargetController : MonoBehaviour
     {
 
         count++;
-        Debug.Log(count);
         if (count >= 10)
         {
             count = 0;
@@ -52,6 +51,7 @@ public class TargetController : MonoBehaviour
             //新しい座標を代入
             trans.transform.Translate(targetVector);
 
+            //スコア加算
             score += 1;
         }
     }
