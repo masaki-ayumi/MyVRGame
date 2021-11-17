@@ -7,12 +7,14 @@ public class ShotCreate : MonoBehaviour
     public GameObject shotCreate;
     public GameObject shotPrefab;
 
+    public EffectScript effectScript;
+
     public int timeCount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        effectScript = GetComponent<EffectScript>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,8 @@ public class ShotCreate : MonoBehaviour
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
                 Destroy(shot, 1.0f);
+
+                effectScript.FireEffect(shotCreate.transform);
             }
         }
     }
