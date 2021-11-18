@@ -22,12 +22,16 @@ public class EffectScript : MonoBehaviour
     {
         //particle = particleObject.GetComponent<ParticleSystem>();
 
-        GameObject effect = Instantiate(particleObject, shotCreate.position, Quaternion.identity);
+        //GameObject effect = Instantiate(particleObject, shotCreate.position, Quaternion.identity);
 
-        Debug.Log(effect);
+        particle.Play();
 
-
-
+        if(particle.isStopped)
+        {
+            particle.Stop();
+            //Destroy(effect);
+            Destroy(particle);
+        }
 
 
 
