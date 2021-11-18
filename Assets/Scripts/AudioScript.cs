@@ -6,6 +6,8 @@ public class AudioScript : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip fireSE;
+    public AudioClip hitSE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +23,10 @@ public class AudioScript : MonoBehaviour
     public void FireSE()
     {
         audioSource.PlayOneShot(fireSE);
+    }
+
+    public void HitSE()
+    {
+        audioSource.PlayOneShot(hitSE);
     }
 }

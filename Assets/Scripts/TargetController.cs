@@ -13,12 +13,19 @@ public class TargetController : MonoBehaviour
     int count = 0;
     public int score = 0;
 
+    public GameObject audioObject;
+    AudioScript audioScript;
+
+    EffectScript effectScript;
 
     // Start is called before the first frame update
     void Start()
     {
         trans = this.GetComponent<Transform>();
         rigid = this.GetComponent<Rigidbody>();
+
+        effectScript = this.GetComponent<EffectScript>();
+        audioScript = audioObject.GetComponent<AudioScript>();
     }
 
     // Update is called once per frame
@@ -29,15 +36,17 @@ public class TargetController : MonoBehaviour
 
 
 
-    /// <summary>
-    /// 弾に当たったら的が移動する
-    /// </summary>
     public void OnTriggerEnter(Collider other)
     {
+        //エフェクト再生
+        //effectScript.HitEffect();
 
+        // 弾に当たったら的が移動する
         count++;
         if (count >= 10)
         {
+            audioScript.HitSE();
+
             count = 0;
 
             trans.transform.position = new Vector3(0, 0, 0);
