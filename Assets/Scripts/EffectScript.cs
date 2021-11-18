@@ -5,11 +5,12 @@ using UnityEngine;
 public class EffectScript : MonoBehaviour
 {
     ParticleSystem particle;
-    public GameObject particleObject;
+    public GameObject fireEffect;
+    public GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
-        particle = particleObject.GetComponent<ParticleSystem>();
+        
     }
 
     // Update is called once per frame
@@ -18,22 +19,29 @@ public class EffectScript : MonoBehaviour
 
     }
 
-    public void FireEffect(Transform shotCreate)
+    public void FireEffect()
     {
-        //particle = particleObject.GetComponent<ParticleSystem>();
-
-        //GameObject effect = Instantiate(particleObject, shotCreate.position, Quaternion.identity);
+        particle = fireEffect.GetComponent<ParticleSystem>();
 
         particle.Play();
 
         if(particle.isStopped)
         {
             particle.Stop();
-            //Destroy(effect);
             Destroy(particle);
         }
+    }
 
+    public void HitEffect()
+    {
+        particle = hitEffect.GetComponent<ParticleSystem>();
 
+        particle.Play();
 
+        if (particle.isStopped)
+        {
+            particle.Stop();
+            Destroy(particle);
+        }
     }
 }

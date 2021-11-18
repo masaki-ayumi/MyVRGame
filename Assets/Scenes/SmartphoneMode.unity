@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireSE: {fileID: 8300000, guid: 845ea0a180c4b5d43b8995406855da81, type: 3}
+  hitSE: {fileID: 8300000, guid: 24cf0a48e98e66241ae04f1d90973b83, type: 3}
 --- !u!82 &474008972
 AudioSource:
   m_ObjectHideFlags: 0
@@ -442,6 +443,7 @@ GameObject:
   - component: {fileID: 607115497}
   - component: {fileID: 607115498}
   - component: {fileID: 607115499}
+  - component: {fileID: 607115493}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -449,6 +451,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &607115493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607115492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7017f5ce2ce51df4a9062cba22634bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireEffect: {fileID: 1034924953}
+  hitEffect: {fileID: 8515327437322408061, guid: 6ddf825bb90d2b7449ba50cbfdfe5c8c,
+    type: 3}
 --- !u!23 &607115494
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -539,6 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  audioObject: {fileID: 474008970}
 --- !u!135 &607115499
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -589,7 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCreate: {fileID: 955865007}
-  shotPrefab: {fileID: 2277812934731147933, guid: 5079cb96cd3531440a68752f4065e291,
+  shotPrefab: {fileID: 8515327437322408061, guid: 6ddf825bb90d2b7449ba50cbfdfe5c8c,
     type: 3}
   audioObject: {fileID: 474008970}
   timeCount: 0
@@ -620,7 +638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7017f5ce2ce51df4a9062cba22634bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObject: {fileID: 1034924953}
+  fireEffect: {fileID: 1034924953}
+  hitEffect: {fileID: 2277812934731147933, guid: 5079cb96cd3531440a68752f4065e291,
+    type: 3}
 --- !u!1 &1020812311
 GameObject:
   m_ObjectHideFlags: 0
