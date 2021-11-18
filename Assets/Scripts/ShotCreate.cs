@@ -27,12 +27,13 @@ public class ShotCreate : MonoBehaviour
         timeCount++;
         if (Input.GetMouseButton(0))
         {
+            //弾を等間隔で発射
 
             if (timeCount % 6 == 0)
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
                 Destroy(shot, 1.0f);
-                effectScript.FireEffect(shotCreate.transform);
+                effectScript.FireEffect();
                 audioScript.FireSE();
 
             }
