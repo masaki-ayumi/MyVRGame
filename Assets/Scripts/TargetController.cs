@@ -56,7 +56,7 @@ public class TargetController : MonoBehaviour
 
             //座標を乱数で決定
             targetVector.x = Random.Range(-10, 10);
-            targetVector.y = Random.Range(-10, 10);
+            targetVector.y = Random.Range(0, 10);
             targetVector.z = Random.Range(-10, 10);
 
             //新しい座標を代入
