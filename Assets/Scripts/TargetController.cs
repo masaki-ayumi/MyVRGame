@@ -39,12 +39,14 @@ public class TargetController : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         //エフェクト再生
-        effectScript.HitEffect();
+        effectScript.ExplosionEffect();
 
         // 弾に当たったら的が移動する
         count++;
         if (count >= 10)
         {
+            
+
             audioScript.HitSE();
 
             count = 0;

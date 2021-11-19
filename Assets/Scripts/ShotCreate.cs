@@ -33,7 +33,7 @@ public class ShotCreate : MonoBehaviour
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
                 Destroy(shot, 1.0f);
-                effectScript.FireEffect();
+                effectScript.MuzzleFlashEffect();
                 audioScript.FireSE();
 
             }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class EffectScript : MonoBehaviour
 {
     ParticleSystem particle;
-    public GameObject fireEffect;
-    public GameObject hitEffect;
+    public GameObject muzzleFlashEffect;
+    public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,29 +19,19 @@ public class EffectScript : MonoBehaviour
 
     }
 
-    public void FireEffect()
+    //マズルフラッシュエフェクト
+    public void MuzzleFlashEffect()
     {
-        particle = fireEffect.GetComponent<ParticleSystem>();
+        particle = muzzleFlashEffect.GetComponent<ParticleSystem>();
 
         particle.Play();
-
-        if(particle.isStopped)
-        {
-            particle.Stop();
-            Destroy(particle);
-        }
     }
 
-    public void HitEffect()
+    //爆発エフェクト
+    public void ExplosionEffect()
     {
-        particle = hitEffect.GetComponent<ParticleSystem>();
+        particle = explosionEffect.GetComponent<ParticleSystem>();
 
         particle.Play();
-
-        if (particle.isStopped)
-        {
-            particle.Stop();
-            Destroy(particle);
-        }
     }
 }
