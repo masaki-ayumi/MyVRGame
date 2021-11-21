@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4a7fc9f4ef39d4c99114df06b8fc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSE: {fileID: 8300000, guid: 845ea0a180c4b5d43b8995406855da81, type: 3}
+  fireSE: {fileID: 8300000, guid: 6739c01659ad96d47987f4ddee226b36, type: 3}
   hitSE: {fileID: 8300000, guid: 24cf0a48e98e66241ae04f1d90973b83, type: 3}
 --- !u!82 &474008972
 AudioSource:
@@ -329,11 +329,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 81adfde80974a2c4188d402a9baca9ba, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
