@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     private int score;
     private float countdown = 60f;
 
+    public bool isStoopde = false;
+
     Text timeText;
     public GameObject timeTextobject;
 
@@ -35,6 +37,8 @@ public class UIManager : MonoBehaviour
         if (countdown<=0)
         {
             timeText.text = "おわり";
+
+            isStoopde = true;
         }
 
         ScoreUI();

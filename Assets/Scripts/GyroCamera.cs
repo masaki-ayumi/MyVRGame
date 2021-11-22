@@ -17,6 +17,6 @@ public class GyroCamera : MonoBehaviour
     {
         currentGyro = Input.gyro.attitude;
         this.transform.localRotation =
-            Quaternion.Euler(90, 90, 0) * (new Quaternion(-currentGyro.x, -currentGyro.y, currentGyro.z, currentGyro.w));
+            Quaternion.Euler(90, 0, 0) * (new Quaternion(-currentGyro.x, -currentGyro.y, currentGyro.z, currentGyro.w));
     }
 }

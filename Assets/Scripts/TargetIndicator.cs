@@ -56,9 +56,6 @@ public class TargetIndicator : MonoBehaviour
             position.y /= d;
         }
 
-        //Debug.Log(position);
-        //Debug.Log(mainCamera.WorldToScreenPoint(target.position));
-        //Debug.Log(center);
 
         rectTransform.anchoredPosition = position / canvasScale;
 
@@ -67,8 +64,7 @@ public class TargetIndicator : MonoBehaviour
         arrow.enabled = isOffscreen;
         if (isOffscreen)
         {
-            arrow.rectTransform.eulerAngles = new Vector3(
-                0f, 0f,
+            arrow.rectTransform.eulerAngles = new Vector3(0f, 0f,
                 Mathf.Atan2(position.y, position.x) * Mathf.Rad2Deg
             );
         }
