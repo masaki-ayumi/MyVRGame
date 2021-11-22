@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 1021464477}
   m_Layer: 0
   m_Name: UIManager
-  m_TagString: Untagged
+  m_TagString: UIManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreTextobject: {fileID: 1736279812}
   target: {fileID: 607115492}
+  isStoopde: 0
   timeTextobject: {fileID: 1291799803}
 --- !u!4 &1021464478
 Transform:
