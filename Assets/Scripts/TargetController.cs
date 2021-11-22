@@ -47,7 +47,7 @@ public class TargetController : MonoBehaviour
         {
             
 
-            audioScript.HitSE();
+            audioScript.ExplosionSE();
 
             count = 0;
 

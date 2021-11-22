@@ -5,8 +5,8 @@ using UnityEngine;
 public class AudioScript : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip fireSE;
-    public AudioClip hitSE;
+    public AudioClip muzzleFlashSE;
+    public AudioClip explosionSE;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,15 @@ public class AudioScript : MonoBehaviour
         
     }
 
-    public void FireSE()
+    //マズルフラッシュ効果音
+    public void MuzzleFlashSE()
     {
-        audioSource.PlayOneShot(fireSE);
+        audioSource.PlayOneShot(muzzleFlashSE);
     }
 
-    public void HitSE()
+    //爆発効果音
+    public void ExplosionSE()
     {
-        audioSource.PlayOneShot(hitSE);
+        audioSource.PlayOneShot(explosionSE);
     }
 }
