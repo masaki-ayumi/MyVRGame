@@ -7,10 +7,13 @@ public class ShotCreate : MonoBehaviour
     public GameObject shotCreate;
     public GameObject shotPrefab;
 
-    public GameObject audioObject;
+    GameObject audioObject;
     AudioScript audioScript;
 
     EffectScript effectScript;
+
+    GameObject uiIManager;
+    UIManager uiManagerScript;
 
     public int timeCount = 0;
 
@@ -18,6 +21,11 @@ public class ShotCreate : MonoBehaviour
     void Start()
     {
         effectScript = this.GetComponent<EffectScript>();
+
+        uiIManager = GameObject.FindGameObjectWithTag("UIManager");
+        uiManagerScript = uiIManager.GetComponent<UIManager>();
+
+        audioObject = GameObject.FindGameObjectWithTag("Audio");
         audioScript = audioObject.GetComponent<AudioScript>();
     }
 
@@ -25,7 +33,7 @@ public class ShotCreate : MonoBehaviour
     void FixedUpdate()
     {
         timeCount++;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
         {
             //弾を等間隔で発射
 
@@ -34,7 +42,7 @@ public class ShotCreate : MonoBehaviour
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
                 Destroy(shot, 1.0f);
                 effectScript.MuzzleFlashEffect();
-                audioScript.FireSE();
+                audioScript.MuzzleFlashSE();
 
             }
         }
