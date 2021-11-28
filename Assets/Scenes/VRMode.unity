@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7341055, g: 0.68551, b: 0.6916617, a: 1}
+  m_IndirectSpecularColor: {r: 0.73410594, g: 0.6855105, b: 0.6916628, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -622,7 +622,7 @@ RectTransform:
   m_GameObject: {fileID: 476150882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.27355, y: 0.27355, z: 0.27355}
   m_Children:
   - {fileID: 1894257980}
   - {fileID: 1548269739}
@@ -632,7 +632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 19}
+  m_AnchoredPosition: {x: 0, y: 21.5}
   m_SizeDelta: {x: 64, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476150884
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 7
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1076,7 +1076,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 8, y: 8}
+  m_SizeDelta: {x: 64.57, y: 33.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1550724566
 GameObject:
@@ -1461,8 +1461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.5, y: 0}
-  m_SizeDelta: {x: 8, y: 8}
+  m_AnchoredPosition: {x: -68.5, y: 0}
+  m_SizeDelta: {x: 125.33, y: 82.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894257981
 MonoBehaviour:
@@ -1485,7 +1485,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 7
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1496,7 +1496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: "\u30B9\u30B3\u30A2"
 --- !u!222 &1894257982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1523,14 +1523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c349ebabfb0224ba66968929fc95a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &1897478125
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897478123}
-  m_Enabled: 1
 --- !u!4 &1897478130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 9069ff3d504c93343bc5c9a6d99a845b,
