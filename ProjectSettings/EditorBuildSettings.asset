@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SmartphoneMode.unity
     guid: 2efbefec5c08c164ab1cdc4191edd63a
+  - enabled: 1
+    path: Assets/Scenes/VRMode.unity
+    guid: 046ef3d85cb5dac4aae29aaae327d307
   m_configObjects: {}
