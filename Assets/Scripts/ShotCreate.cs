@@ -33,7 +33,9 @@ public class ShotCreate : MonoBehaviour
     void FixedUpdate()
     {
         timeCount++;
-        if (Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
+        //マウスの左クリックもしくはJoyConのZRボタンで発射
+        if (Input.GetKey(KeyCode.JoystickButton15) && uiManagerScript.isStoopde == false ||
+            Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
         {
             //弾を等間隔で発射
 
