@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 的の動きや状態を制御するスクリプト
+/// 的の動きや状態を制御する
 /// </summary>
 public class TargetController : MonoBehaviour
 {

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 弾を生成する
+/// </summary>
 public class ShotCreate : MonoBehaviour
 {
     public GameObject shotCreate;
