@@ -37,12 +37,12 @@ public class JoyConMonitor : MonoBehaviour
 
         if (joycons == null || joycons.Count <= 0) return;
 
-        foreach(var button in buttons)
+        foreach (var button in buttons)
         {
-            if(joyconL.GetButton(button))
-            {
-                pressedButtonL = button;
-            }
+            //if (joyconL.GetButton(button))
+            //{
+            //    pressedButtonL = button;
+            //}
 
             if (joyconR.GetButton(button))
             {
@@ -50,7 +50,7 @@ public class JoyConMonitor : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             joyconL.SetRumble(160, 320, 0.6f, 200);
         }
@@ -66,17 +66,17 @@ public class JoyConMonitor : MonoBehaviour
         var style = GUI.skin.GetStyle("label");
         style.fontSize = 24;
 
-        if(joycons==null||joycons.Count<=0)
+        if (joycons == null || joycons.Count <= 0)
         {
             GUILayout.Label("JoyConが接続できません");
             return;
         }
 
-        if (!joycons.Any(c=>c.isLeft))
-        {
-            GUILayout.Label("JoyCon(L)が接続されてません");
-            return;
-        }
+        //if (!joycons.Any(c => c.isLeft))
+        //{
+        //    GUILayout.Label("JoyCon(L)が接続されてません");
+        //    return;
+        //}
 
         if (!joycons.Any(c => !c.isLeft))
         {
@@ -86,16 +86,16 @@ public class JoyConMonitor : MonoBehaviour
 
         GUILayout.BeginHorizontal(GUILayout.Width(960));
 
-        foreach(var joycon in joycons)
+        foreach (var joycon in joycons)
         {
-            var isLeft          = joycon.isLeft;
-            var name            =isLeft? "Joy - Con(L)" : "Joy - Con(R)";
-            var key             = isLeft ? "Z キー" : "X キー";
-            var button          = isLeft ? pressedButtonL : pressedButtonR;
-            var stick           = joycon.GetStick();
-            var gyro            = joycon.GetGyro();
-            var accel           = joycon.GetAccel();
-            var orientation     = joycon.GetVector();
+            var isLeft = joycon.isLeft;
+            var name = isLeft ? "Joy - Con(L)" : "Joy - Con(R)";
+            var key = isLeft ? "Z キー" : "X キー";
+            var button = isLeft ? pressedButtonL : pressedButtonR;
+            var stick = joycon.GetStick();
+            var gyro = joycon.GetGyro();
+            var accel = joycon.GetAccel();
+            var orientation = joycon.GetVector();
 
             GUILayout.BeginVertical(GUILayout.Width(480));
             GUILayout.Label(name);
