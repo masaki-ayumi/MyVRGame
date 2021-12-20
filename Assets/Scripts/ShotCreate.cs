@@ -48,8 +48,10 @@ public class ShotCreate : MonoBehaviour
         if (joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false ||
             Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
         {
-            //弾を等間隔で発射
+            //弾発射時にJoyCon振動
+            //joyconR.SetRumble(160, 320, 0.6f, 1000);
 
+            //弾を等間隔で発射
             if (timeCount % 6 == 0)
             {
                 GameObject shot = Instantiate(shotPrefab, shotCreate.transform);
