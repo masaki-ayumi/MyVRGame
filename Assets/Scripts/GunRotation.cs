@@ -7,6 +7,7 @@ public class GunRotation : MonoBehaviour
     List<Joycon> joycons;
     Joycon joyconR;
     Vector3 gyro;
+    Quaternion orientation;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,23 @@ public class GunRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        const float MOVE_PER_CLOCK = 0.01f;
         gyro = joyconR.GetGyro();
+        orientation = joyconR.GetVector();
+
+        orientation = gameObject.transform.rotation;
+
+        orientation.x += -gyro[1] * MOVE_PER_CLOCK;
+        orientation.y += -gyro[0] * MOVE_PER_CLOCK;
+        orientation.z += -gyro[2] * MOVE_PER_CLOCK;
+
+
+
+        gameObject.transform.rotation = orientation;
+
+        if(joyconR.GetButton(Joycon.Button.DPAD_UP))
+        {
+            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
     }
 }
