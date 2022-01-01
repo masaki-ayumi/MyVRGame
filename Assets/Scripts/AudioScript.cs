@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// オーディオ関連
+/// 音は再生させる関数等
+/// </summary>
 public class AudioScript : MonoBehaviour
 {
     AudioSource audioSource;

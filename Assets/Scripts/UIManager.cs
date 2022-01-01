@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// UI関連
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     Text scoreText;

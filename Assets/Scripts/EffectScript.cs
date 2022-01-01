@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// エフェクト関連
+/// 再生させる関数等
+/// </summary>
 public class EffectScript : MonoBehaviour
 {
     ParticleSystem particle;
