@@ -37,15 +37,15 @@ public class ShotCreate : MonoBehaviour
     void FixedUpdate()
     {
         //JoyConの情報のインスタンスを取得
-        var joycons = JoyconManager.Instance.j;
-        var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
+        //var joycons = JoyconManager.Instance.j;
+        //var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
 
 
 
 
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
-        if (joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false ||
+        if (/*joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false ||*/
             Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
         {
             //弾発射時にJoyCon振動
