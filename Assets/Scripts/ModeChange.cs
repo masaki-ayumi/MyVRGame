@@ -21,4 +21,9 @@ public class ModeChange : MonoBehaviour
     {
         SceneManager.LoadScene("VRMode");
     }
+
+    public void SmartphoneModeChange()
+    {
+        SceneManager.LoadScene("SmartphoneMode");
+    }
 }
