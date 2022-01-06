@@ -26,4 +26,9 @@ public class ModeChange : MonoBehaviour
     {
         SceneManager.LoadScene("SmartphoneMode");
     }
+
+    public void TitleSceneChange()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
