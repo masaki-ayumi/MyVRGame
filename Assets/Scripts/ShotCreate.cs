@@ -14,7 +14,7 @@ public class ShotCreate : MonoBehaviour
 
     EffectScript effectScript;
 
-    GameObject uiIManager;
+    GameObject uiManager;
     UIManager uiManagerScript;
 
     public int timeCount = 0;
@@ -26,8 +26,8 @@ public class ShotCreate : MonoBehaviour
     {
         effectScript = this.GetComponent<EffectScript>();
 
-        uiIManager = GameObject.FindGameObjectWithTag("UIManager");
-        uiManagerScript = uiIManager.GetComponent<UIManager>();
+        uiManager = GameObject.FindGameObjectWithTag("UIManager");
+        uiManagerScript = uiManager.GetComponent<UIManager>();
 
         audioObject = GameObject.FindGameObjectWithTag("Audio");
         audioScript = audioObject.GetComponent<AudioScript>();
