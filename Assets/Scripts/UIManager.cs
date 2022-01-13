@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     Text timeText;
     public GameObject timeTextobject;
 
+    public GameObject menuObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,17 +36,25 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        TimeUI();
+        ScoreUI();
+        MenuUI(isStoopde);
+    }
+
+
+    public void TimeUI()
+    {
         countdown -= Time.deltaTime;
         timeText.text = countdown.ToString("f0");
-        if (countdown<=0)
+        if (countdown <= 0)
         {
             timeText.text = "おわり";
 
             isStoopde = true;
         }
-
-        ScoreUI();
     }
+
 
     public void ScoreUI()
     {
@@ -55,5 +65,11 @@ public class UIManager : MonoBehaviour
         scoreText.text = "スコア:"+score.ToString();
     }
 
-    
+    public void MenuUI(bool isStoopde)
+    {
+        if (isStoopde)
+        {
+            menuObject.SetActive(true);
+        }
+    }
 }
