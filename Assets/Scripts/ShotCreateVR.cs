@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// 弾を生成する
 /// </summary>
-public class ShotCreate : MonoBehaviour
+public class ShotCreateVR : MonoBehaviour
 {
     public GameObject shotCreate;
     public GameObject shotPrefab;
@@ -14,20 +14,20 @@ public class ShotCreate : MonoBehaviour
 
     EffectScript effectScript;
 
-    GameObject uiManager;
+    GameObject uiIManager;
     UIManager uiManagerScript;
 
     public int timeCount = 0;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         effectScript = this.GetComponent<EffectScript>();
 
-        uiManager = GameObject.FindGameObjectWithTag("UIManager");
-        uiManagerScript = uiManager.GetComponent<UIManager>();
+        uiIManager = GameObject.FindGameObjectWithTag("UIManager");
+        uiManagerScript = uiIManager.GetComponent<UIManager>();
 
         audioObject = GameObject.FindGameObjectWithTag("Audio");
         audioScript = audioObject.GetComponent<AudioScript>();
@@ -37,16 +37,16 @@ public class ShotCreate : MonoBehaviour
     void FixedUpdate()
     {
         //JoyConの情報のインスタンスを取得
-        //var joycons = JoyconManager.Instance.j;
-        //var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
+        var joycons = JoyconManager.Instance.j;
+        var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
 
 
 
 
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
-        if (/*joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false ||*/
-            Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
+        if (Input.GetMouseButton(0) && uiManagerScript.isStoopde == false||
+            joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false)
         {
             //弾発射時にJoyCon振動
             //joyconR.SetRumble(160, 320, 0.6f, 1000);
