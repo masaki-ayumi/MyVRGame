@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     private float countdown = 60f;
 
     public bool isStoopde = false;
+    public bool isStartMiniGame = false;
 
     Text timeText;
     public GameObject timeTextobject;
@@ -36,12 +37,19 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        TimeUI();
-        ScoreUI();
+        ShootingGame(isStartMiniGame);
         MenuUI(isStoopde);
     }
 
+
+    public void ShootingGame(bool isStart)
+    {
+        if (isStart)
+        {
+            TimeUI();
+            ScoreUI();
+        }
+    }
 
     public void TimeUI()
     {
@@ -62,7 +70,7 @@ public class UIManager : MonoBehaviour
         score = targetScripts.score;
 
         //スコア画面表示
-        scoreText.text = "スコア:"+score.ToString();
+        scoreText.text = "スコア:" + score.ToString();
     }
 
     public void MenuUI(bool isStoopde)
