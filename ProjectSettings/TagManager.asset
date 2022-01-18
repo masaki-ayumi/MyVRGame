@@ -9,6 +9,7 @@ TagManager:
   - Audio
   - shot
   - UIManager
+  - MiniGameSwitch
   layers:
   - Default
   - TransparentFX

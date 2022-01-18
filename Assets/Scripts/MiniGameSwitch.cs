@@ -9,11 +9,17 @@ public class MiniGameSwitch : MonoBehaviour
 
     private bool isStartMiniGame = false;
 
+    public GameObject score;
+    public GameObject time;
+
     // Start is called before the first frame update
     void Start()
     {
         uiManager = GameObject.FindGameObjectWithTag("UIManager");
         uiManagerScript = uiManager.GetComponent<UIManager>();
+
+        score.SetActive(false);
+        time.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,5 +32,8 @@ public class MiniGameSwitch : MonoBehaviour
     {
         isStartMiniGame = true;
         uiManagerScript.isStartMiniGame = isStartMiniGame;
+
+        score.SetActive(true);
+        time.SetActive(true);
     }
 }
