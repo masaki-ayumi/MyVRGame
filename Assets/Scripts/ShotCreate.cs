@@ -46,7 +46,7 @@ public class ShotCreate : MonoBehaviour
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
         if (/*joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false ||*/
-            Input.GetMouseButton(0) && uiManagerScript.isStoopde == false)
+            Input.GetMouseButton(0))
         {
             //弾発射時にJoyCon振動
             //joyconR.SetRumble(160, 320, 0.6f, 1000);

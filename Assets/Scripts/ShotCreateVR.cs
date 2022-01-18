@@ -45,11 +45,11 @@ public class ShotCreateVR : MonoBehaviour
 
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
-        if (Input.GetMouseButton(0) && uiManagerScript.isStoopde == false||
-            joyconR.GetButton(Joycon.Button.SHOULDER_2) && uiManagerScript.isStoopde == false)
+        if (Input.GetMouseButton(0)||
+            joyconR.GetButton(Joycon.Button.SHOULDER_2))
         {
             //弾発射時にJoyCon振動
-            //joyconR.SetRumble(160, 320, 0.6f, 1000);
+            joyconR.SetRumble(100, 120, 0.6f, 10);
 
             //弾を等間隔で発射
             if (timeCount % 6 == 0)
