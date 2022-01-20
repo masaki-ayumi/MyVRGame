@@ -9,6 +9,9 @@ public class MiniGameSwitch : MonoBehaviour
 
     private bool isStartMiniGame = false;
 
+    private GameObject target;
+    private Vector3 targetPosition;
+
     public GameObject score;
     public GameObject time;
 
@@ -18,6 +21,9 @@ public class MiniGameSwitch : MonoBehaviour
         uiManager = GameObject.FindGameObjectWithTag("UIManager");
         uiManagerScript = uiManager.GetComponent<UIManager>();
 
+        target = GameObject.FindGameObjectWithTag("Target");
+        targetPosition = target.transform.position;
+
         score.SetActive(false);
         time.SetActive(false);
     }
@@ -25,15 +31,24 @@ public class MiniGameSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (uiManagerScript.isStoopde == true)
+        {
+            this.gameObject.SetActive(true);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
     {
+        target.transform.position = targetPosition;
+
         isStartMiniGame = true;
         uiManagerScript.isStartMiniGame = isStartMiniGame;
 
         score.SetActive(true);
         time.SetActive(true);
+
+        this.gameObject.SetActive(false);
+
+
     }
 }

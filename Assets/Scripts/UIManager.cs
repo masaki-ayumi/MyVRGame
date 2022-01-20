@@ -75,9 +75,9 @@ public class UIManager : MonoBehaviour
 
     public void MenuUI(bool isStoopde)
     {
-        if (isStoopde)
-        {
-            menuObject.SetActive(true);
-        }
+        //if (isStoopde)
+        //{
+        //    menuObject.SetActive(true);
+        //}
     }
 }
