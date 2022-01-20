@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject target;
     TargetController targetScripts;
-    private int score;
+    private int score = 0;
     private float countdown = 60f;
 
     public bool isStoopde = false;
@@ -46,12 +46,12 @@ public class UIManager : MonoBehaviour
     {
         if (isStart)
         {
-            TimeUI();
-            ScoreUI();
+            TimeUI(countdown);
+            ScoreUI(score);
         }
     }
 
-    public void TimeUI()
+    public void TimeUI(float countdown)
     {
         countdown -= Time.deltaTime;
         timeText.text = countdown.ToString("f0");
@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void ScoreUI()
+    public void ScoreUI(int score)
     {
         //的からスコアを受け取る
         score = targetScripts.score;
