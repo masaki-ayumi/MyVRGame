@@ -26,11 +26,11 @@ public class GunRotation : MonoBehaviour
 
         orientation = gameObject.transform.rotation;
 
-        //うまくできているのを一旦保存
-        //orientation.x += -gyro[1] * MOVE_PER_CLOCK;
-        //orientation.y += -gyro[0] * MOVE_PER_CLOCK;
+        //orientation.x += -gyro[0] * MOVE_PER_CLOCK;
+        //orientation.y += -gyro[1] * MOVE_PER_CLOCK;
         //orientation.z += -gyro[2] * MOVE_PER_CLOCK;
 
+        //うまくできているのを一旦保存
         //銃とJoyConの回転の同期
         orientation.z += -gyro[0] * MOVE_PER_CLOCK;
         orientation.x += -gyro[1] * MOVE_PER_CLOCK;
