@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject target;
     TargetController targetScripts;
     private int score = 0;
-    private float countdown = 60f;
+    public float countdown = 60f;
 
     public bool isStoopde = false;
     public bool isStartMiniGame = false;
@@ -53,11 +53,18 @@ public class UIManager : MonoBehaviour
 
     public void TimeUI(float countdown)
     {
+        float temp = 0;
+        temp = countdown;
+
         countdown -= Time.deltaTime;
         timeText.text = countdown.ToString("f0");
+        isStoopde = false;
+            Debug.Log(temp);
         if (countdown <= 0)
         {
             timeText.text = "おわり";
+
+            countdown = temp;
 
             isStoopde = true;
         }

@@ -10,6 +10,7 @@ TagManager:
   - shot
   - UIManager
   - MiniGameSwitch
+  - Switch
   layers:
   - Default
   - TransparentFX
