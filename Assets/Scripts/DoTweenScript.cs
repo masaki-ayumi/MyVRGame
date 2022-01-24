@@ -15,6 +15,7 @@ public class DoTweenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.DORotate(new Vector3(180f, 0, 0), 2f).SetLoops(-1,LoopType.Restart);
+        transform.DORotate(new Vector3(0, 360, 0), 10f, RotateMode.LocalAxisAdd);
+       
     }
 }
