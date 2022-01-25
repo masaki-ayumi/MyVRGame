@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject target;
     TargetController targetScripts;
     private int score = 0;
+    private const float TIME = 60f;
     public float countdown = 60f;
 
     public bool isStoopde = false;
@@ -39,6 +40,8 @@ public class UIManager : MonoBehaviour
     {
         ShootingGame(isStartMiniGame);
         MenuUI(isStoopde);
+
+        
     }
 
 
@@ -46,28 +49,26 @@ public class UIManager : MonoBehaviour
     {
         if (isStart)
         {
-            TimeUI(countdown);
+            TimeUI(isStart);
             ScoreUI(score);
         }
     }
 
-    public void TimeUI(float countdown)
+    public void TimeUI(bool isStart)
     {
-        float temp = 0;
-        temp = countdown;
+            countdown -= Time.deltaTime;
+            timeText.text = countdown.ToString("f0");
+            isStoopde = false;
+            Debug.Log(countdown);
+            if (countdown < 0)
+            {
+                timeText.text = "おわり";
 
-        countdown -= Time.deltaTime;
-        timeText.text = countdown.ToString("f0");
-        isStoopde = false;
-            Debug.Log(temp);
-        if (countdown <= 0)
-        {
-            timeText.text = "おわり";
+                countdown = TIME;
 
-            countdown = temp;
-
-            isStoopde = true;
-        }
+                isStoopde = true;
+                isStartMiniGame = false;
+            }
     }
 
 
@@ -78,6 +79,12 @@ public class UIManager : MonoBehaviour
 
         //スコア画面表示
         scoreText.text = "スコア:" + score.ToString();
+
+        //isStoopde = false;
+        if (isStoopde)
+        {
+            targetScripts.score = 0;
+        }
     }
 
     public void MenuUI(bool isStoopde)

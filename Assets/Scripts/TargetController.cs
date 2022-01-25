@@ -46,7 +46,6 @@ public class TargetController : MonoBehaviour
         if (count >= 10)
         {
             
-
             audioScript.ExplosionSE();
 
             count = 0;
