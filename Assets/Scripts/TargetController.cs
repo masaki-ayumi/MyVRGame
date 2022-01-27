@@ -10,6 +10,9 @@ public class TargetController : MonoBehaviour
     Transform trans;
     Rigidbody rigid;
     Vector3 targetVector;
+
+    Transform player;
+
     int count = 0;
     public int score = 0;
 
@@ -26,12 +29,16 @@ public class TargetController : MonoBehaviour
 
         effectScript = this.GetComponent<EffectScript>();
         audioScript = audioObject.GetComponent<AudioScript>();
+
+        GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        player = mainCamera.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        //原点を向き続ける
+        transform.LookAt(player.transform);
     }
 
 
