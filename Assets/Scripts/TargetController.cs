@@ -39,6 +39,7 @@ public class TargetController : MonoBehaviour
     {
         //原点を向き続ける
         transform.LookAt(player.transform);
+        transform.rotation *= Quaternion.Euler(90f, 0f, 0f);
     }
 
 

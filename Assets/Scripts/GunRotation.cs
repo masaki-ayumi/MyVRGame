@@ -24,22 +24,14 @@ public class GunRotation : MonoBehaviour
         gyro = joyconR.GetGyro();
         orientation = joyconR.GetVector();
 
-        orientation = gameObject.transform.rotation;
+       
 
-        //orientation.x += -gyro[0] * MOVE_PER_CLOCK;
-        //orientation.y += -gyro[1] * MOVE_PER_CLOCK;
-        //orientation.z += -gyro[2] * MOVE_PER_CLOCK;
+        orientation = Quaternion.Euler(-gyro[1], gyro[2], -gyro[0]);
 
-        //うまくできているのを一旦保存
-        //銃とJoyConの回転の同期
-        orientation.z += -gyro[0] * MOVE_PER_CLOCK;
-        orientation.x += -gyro[1] * MOVE_PER_CLOCK;
-        orientation.y += gyro[2] * MOVE_PER_CLOCK;
-
-        gameObject.transform.rotation = orientation;
+        gameObject.transform.rotation = transform.rotation * orientation;
 
         //上ボタンで傾きをリセット
-        if(joyconR.GetButton(Joycon.Button.DPAD_UP))
+        if (joyconR.GetButton(Joycon.Button.DPAD_UP))
         {
             gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
