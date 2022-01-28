@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     Text scoreText;
     public GameObject scoreTextobject;
 
-    public GameObject target;
+
     TargetController targetScripts;
     private int score = 0;
     private const float TIME = 60f;
@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
 
         timeText = timeTextobject.GetComponent<Text>();
 
+        GameObject target = GameObject.FindGameObjectWithTag("Target");
         targetScripts = target.GetComponent<TargetController>();
 
     }
@@ -41,7 +42,7 @@ public class UIManager : MonoBehaviour
         ShootingGame(isStartMiniGame);
         MenuUI(isStoopde);
 
-        
+
     }
 
 
@@ -56,19 +57,19 @@ public class UIManager : MonoBehaviour
 
     public void TimeUI(bool isStart)
     {
-            countdown -= Time.deltaTime;
-            timeText.text = countdown.ToString("f0");
-            isStoopde = false;
-            Debug.Log(countdown);
-            if (countdown < 0)
-            {
-                timeText.text = "おわり";
+        countdown -= Time.deltaTime;
+        timeText.text = countdown.ToString("f0");
+        isStoopde = false;
+        Debug.Log(countdown);
+        if (countdown < 0)
+        {
+            timeText.text = "おわり";
 
-                countdown = TIME;
+            countdown = TIME;
 
-                isStoopde = true;
-                isStartMiniGame = false;
-            }
+            isStoopde = true;
+            isStartMiniGame = false;
+        }
     }
 
 

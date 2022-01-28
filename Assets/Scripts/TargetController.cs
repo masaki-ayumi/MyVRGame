@@ -40,6 +40,8 @@ public class TargetController : MonoBehaviour
         //原点を向き続ける
         transform.LookAt(player.transform);
         transform.rotation *= Quaternion.Euler(90f, 0f, 0f);
+
+       
     }
 
 
@@ -62,12 +64,12 @@ public class TargetController : MonoBehaviour
             targetVector = new Vector3(0, 0, 0);
 
             //座標を乱数で決定
-            targetVector.x = Random.Range(-10, 10);
-            targetVector.y = Random.Range(0, 10);
-            targetVector.z = Random.Range(-10, 10);
+            targetVector.x = Random.Range(-15, 15);
+            targetVector.y = Random.Range(0, 15);
+            targetVector.z = Random.Range(-15, 15);
 
             //新しい座標を代入
-            trans.transform.Translate(targetVector);
+            trans.transform.position = targetVector;
 
             //スコア加算
             score += 1;
