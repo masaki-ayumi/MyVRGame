@@ -46,7 +46,7 @@ public class MiniGameSwitch : MonoBehaviour
         {
             switchObject.SetActive(true);
 
-            score.SetActive(false);
+            //score.SetActive(false);
             time.SetActive(false);
         }
     }
