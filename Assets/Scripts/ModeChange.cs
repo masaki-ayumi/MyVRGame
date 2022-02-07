@@ -31,4 +31,9 @@ public class ModeChange : MonoBehaviour
     {
         SceneManager.LoadScene("TitleScene");
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        TitleSceneChange();
+    }
 }
